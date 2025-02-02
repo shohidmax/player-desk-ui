@@ -14,10 +14,12 @@ import Settings from './Component/Profile/Settings';
 import Requireauth from './Component/Authorization/Shaired/Requireauth';
 import Login from './Component/Authorization/Login/Login';
 import SignUp from './Component/Authorization/Signup/SignUp';
+import Dashboard from './Component/Pages/Dashboard';
+import Turnament from './Component/Pages/Turnament';
 
 function App() { 
   return (
-    <div className="App">
+    <div className="App w-11/12 mx-auto">
  
     <Headers></Headers>
     <Routes>
@@ -28,6 +30,7 @@ function App() {
         <Route path="/profile" element={<Requireauth><Profile /></Requireauth> } /> 
         <Route path="/settings" element={<Settings />} /> 
         <Route path="/login" element={<Login/> } /> 
+        <Route path="/turnament" element={<Turnament/> } /> 
         <Route path="/signup" element={<SignUp/> } /> 
         <Route path="/null" element={<Null />} /> 
 
@@ -37,15 +40,15 @@ function App() {
 
         {/* for dashboard */}
 
-        {/* <Route path="/dashboard" element={<Dashboard />}> 
-          <Route index element={<DashboardProfile/>}></Route>
-          <Route path="/dashboard/addsr" element={<Sales2></Sales2>}></Route>
-          <Route path="/dashboard/qr" element={<Qr></Qr>} />
-          <Route path="/dashboard/barcode" element={<BarCode></BarCode>} />
-          <Route path="/dashboard/rpt" element={<Recept></Recept>} />
-          <Route path="/dashboard/avatar" element={<Avatar></Avatar>} />
-          <Route path="/dashboard/srlist" element={<Requireauth><Srlist></Srlist></Requireauth>} />
-        </Route> */}
+        <Route path="/dashboard" element={<Dashboard />}> 
+          <Route index element={<Dashboard />}/>
+          <Route path="/dashboard/addsr" element={ <Dashboard />}/>
+          <Route path="/dashboard/qr" element={<Dashboard />} />
+          <Route path="/dashboard/barcode" element={<Dashboard />} />
+          <Route path="/dashboard/rpt" element={<Dashboard />} />
+          <Route path="/dashboard/avatar" element={<Dashboard />} />
+          <Route path="/dashboard/srlist" element={<Dashboard />} />
+        </Route>
     </Routes>
 
 

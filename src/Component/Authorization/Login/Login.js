@@ -59,7 +59,7 @@ const Login = () => {
 
     return (
       <div> 
-      <div className=' lg:w-3/4 mx-auto'>
+      <div className=' lg:w-6/12  w-3/4 mx-auto'>
       <div className="hero min-h-screen bg-base-000">
             <div className="hero-content flex-col lg:flex-row-reverse">
               <div className="text-center lg:text-left">
